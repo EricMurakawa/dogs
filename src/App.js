@@ -1,8 +1,11 @@
-
+import Api from './api/Api';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">App React</div>
+    <div className="App">
+      <Api/>
+    </div>
   );
 }
 
