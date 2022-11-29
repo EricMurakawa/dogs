@@ -1,6 +1,7 @@
 import Input from "../../components/Form/Input";
 import Button from "../../components/Form/Button";
 import Error from "../../components/Helper/Error";
+import Head from "../../components/Helper/Head";
 import useForm from "../../Hooks/useForm";
 import { USER_POST } from "../../api";
 import { useContext } from "react";
@@ -29,6 +30,7 @@ const LoginCreate = () => {
 
     return (
         <section className="animeLeft">
+            <Head title="Crie sua conta"/>
             <h1 className="title">Cadastre-se</h1>
             <form onSubmit={handleSubmit}>
                 <Input label="Usuário" type="text" name="username" {...username}/>

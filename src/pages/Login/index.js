@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 
 import styles from './Login.module.css';
+import NotFound from "../../components/NotFound";
 
 const Login = () => {
     const {login} = useContext(UserContext);
@@ -21,6 +22,7 @@ const Login = () => {
                     <Route path="criar" element={<LoginCreate/>}/>
                     <Route path="perdeu" element={<LoginPasswordLost/>}/>
                     <Route path="resetar" element={<LoginPasswordReset/>}/>
+                    <Route path='*' element={<NotFound/>}/>
                 </Routes>
             </div>
         </section>

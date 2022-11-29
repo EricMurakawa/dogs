@@ -7,6 +7,10 @@
     height: 100%;
 }
 
+.single.wrapper{
+    position: relative;
+}
+
 .img {
     display: block;
     max-width: 100%;
@@ -30,5 +34,11 @@
     }
     to{
         background-position: -200%;
+    }
+}
+
+@media (max-width: 64rem){
+    .wrapper.inModal{
+        position: relative;
     }
 }

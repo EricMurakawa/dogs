@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Image.module.css';
 
-const Image = ({alt, ...props}) => {
+const Image = ({alt, single, inModal, ...props}) => {
 
     const [skeleton, setSkeleton] = useState(true);
 
@@ -11,7 +11,7 @@ const Image = ({alt, ...props}) => {
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} ${single? styles.single : ''} ${inModal? styles.inModal : ''}`}>
             {skeleton && <div className={styles.skeleton}></div>}
             <img onLoad={handleLoad} className={styles.img} src='' alt={alt} {...props}/>
         </div>

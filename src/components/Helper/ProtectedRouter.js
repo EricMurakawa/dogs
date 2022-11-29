@@ -5,7 +5,7 @@ import { UserContext } from "../../Contexts/UserContext";
 const ProtectedRouter = ({children}) => {
     const {login} = useContext(UserContext);
 
-    return login ? children: <Navigate to="/login"/>;
+    return login ? children : <Navigate to="/login"/>;
 }
  
 export default ProtectedRouter;

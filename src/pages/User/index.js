@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Feed from "../../components/Feed";
 import { UserContext } from "../../Contexts/UserContext";
-import UsePhotoPost from "./UsePhotoPost";
+import UserPhotoPost from "./UserPhotoPost";
 import UserHeader from "./UserHeader";
 import UserStats from "./UserStats";
+import NotFound from "../../components/NotFound";
+import Head from "../../components/Helper/Head";
 
 const User = () => {
 
@@ -12,11 +14,13 @@ const User = () => {
 
     return (
         <section className="container">
+            <Head title="Minha conta"/>
             <UserHeader/>
             <Routes>
                 <Route path="/" element={<Feed user={data.id}/>}/>
-                <Route path="postar" element={<UsePhotoPost/>}/>
+                <Route path="postar" element={<UserPhotoPost/>}/>
                 <Route path="estatisticas" element={<UserStats/>}/>
+                <Route path='*' element={<NotFound/>}/>
             </Routes>
         </section>
     );
